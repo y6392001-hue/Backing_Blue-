@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Backing Blue — Apoyo para familias con TEA en Paraguay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a class="brand" href="#inicio">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-opacity=".25"/>
+        <circle cx="20" cy="20" r="12.5" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <circle cx="20" cy="20" r="6" fill="var(--primary)"/>
+      </svg>
+      Backing Blue
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </label>
+    <nav class="links" aria-label="Navegación principal">
+      <a href="#que-es">Qué es el TEA</a>
+      <a href="#senales">Señales</a>
+      <a href="#orientador">Qué especialista me puede ayudar</a>
+      <a href="#apoyo-familia">Apoyo desde la familia</a>
+      <a href="#recursos">Recursos en Paraguay</a>
+      <a href="#comunidad">Recomendaciones</a>
+      <a href="#ayuda">Líneas de ayuda</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div>
+        <h1>Entender el TEA es el primer paso para acompañar mejor.</h1>
+        <p class="lead"><strong>Backing Blue</strong> es una guía pensada para padres, madres y familias de Paraguay que tienen un hijo o un familiar con Trastorno del Espectro Autista: qué significa el diagnóstico, cómo acompañar desde el hogar y dónde encontrar terapia y apoyo cerca de ustedes.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#recursos">Ver centros y terapias</a>
+          <a class="btn btn-ghost" href="#que-es">Empezar por entender el TEA</a>
+        </div>
+      </div>
+      <div class="motif-wrap">
+        <svg class="motif" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un patrón radial inspirado en el ñandutí, con hilos de colores que representan la diversidad del espectro">
+          <circle cx="160" cy="160" r="150" fill="none" stroke="var(--line)" stroke-width="1"/>
+          <g stroke-width="1.4" fill="none" opacity="0.85">
+            <circle cx="160" cy="160" r="130" stroke="var(--accent-soft)"/>
+            <circle cx="160" cy="160" r="104" stroke="var(--primary)" stroke-opacity=".35"/>
+            <circle cx="160" cy="160" r="78" stroke="var(--accent)" stroke-opacity=".55"/>
+            <circle cx="160" cy="160" r="52" stroke="var(--primary)" stroke-opacity=".6"/>
+          </g>
+          <g id="spokes"></g>
+          <circle cx="160" cy="160" r="26" fill="var(--primary)"/>
+          <circle cx="160" cy="160" r="26" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <script>
+            (function(){
+              var ns='http://www.w3.org/2000/svg';
+              var g=document.currentScript.previousElementSibling;
+              var cx=160, cy=160, rIn=26, rOut=150, n=24;
+              for(var i=0;i<n;i++){
+                var a = (i/n) * Math.PI*2;
+                var x1 = cx + rIn*Math.cos(a), y1 = cy + rIn*Math.sin(a);
+                var x2 = cx + rOut*Math.cos(a), y2 = cy + rOut*Math.sin(a);
+                var line = document.createElementNS(ns,'line');
+                line.setAttribute('x1',x1);line.setAttribute('y1',y1);
+                line.setAttribute('x2',x2);line.setAttribute('y2',y2);
+                line.setAttribute('stroke', i%2===0 ? 'var(--accent)' : 'var(--primary)');
+                line.setAttribute('stroke-opacity', 0.18 + (i%3)*0.08);
+                line.setAttribute('stroke-width','1');
+                g.appendChild(line);
+              }
+            })();
+          </script>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="stat-strip">
+    <div class="wrap">
+      <div class="stat"><b>1 de cada ~10</b><span>familias paraguayas tiene un integrante con TEA, según estimaciones de la Asociación TEA Paraguay</span></div>
+      <div class="stat"><b>Un espectro</b><span>no hay dos personas con TEA iguales entre sí</span></div>
+      <div class="stat"><b>De por vida</b><span>el TEA acompaña a la persona en todas las etapas, no solo en la infancia</span></div>
+    </div>
+  </div>
+
+  <!-- ================= QUÉ ES EL TEA ================= -->
+  <section id="que-es">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>¿Qué es el Trastorno del Espectro Autista?</h2>
+        <p>El TEA es una condición del neurodesarrollo que afecta la forma en que una persona se comunica, interactúa socialmente y percibe el mundo que la rodea. Se llama "espectro" porque se manifiesta de manera muy distinta de una persona a otra: algunas necesitan apoyo constante en la vida diaria y otras son mayormente independientes, pero todas comparten ciertas características centrales.</p>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <h3>No es una enfermedad ni tiene "cura"</h3>
+          <p>El TEA no se cura porque no es una enfermedad: es una manera distinta de procesar el mundo, presente desde el nacimiento. Lo que sí ayuda muchísimo es la intervención temprana, que potencia el desarrollo, la comunicación y la autonomía de cada niño o niña.</p>
+        </div>
+        <div class="card">
+          <h3>Se manifiesta en dos áreas principales</h3>
+          <p>Dificultades en la comunicación y la interacción social (contacto visual, lenguaje, juego compartido) y patrones de comportamiento repetitivos o intereses muy focalizados, junto con sensibilidades sensoriales particulares al sonido, la luz, la textura o el movimiento.</p>
+        </div>
+        <div class="card">
+          <h3>El diagnóstico lo hace un profesional</h3>
+          <p>Solo un equipo médico especializado (neurología, psiquiatría infantil o psicología del desarrollo) puede confirmar un diagnóstico de TEA, generalmente evaluando el desarrollo del niño o niña a lo largo del tiempo. Ninguna lista en internet reemplaza esa evaluación.</p>
+        </div>
+        <div class="card">
+          <h3>Cuanto antes se detecta, mejor</h3>
+          <p>La evidencia muestra que empezar la estimulación y la terapia en los primeros años de vida mejora significativamente el desarrollo del lenguaje, la autonomía y la calidad de vida a largo plazo. Por eso consultar ante la duda nunca está de más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEÑALES ================= -->
+  <section class="alt" id="senales">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Señales que pueden orientarte</h2>
+        <p>Esta lista no diagnostica nada: es solo una guía para saber cuándo tiene sentido pedir una evaluación profesional. Cada niño se desarrolla a su propio ritmo, así que un par de señales aisladas no son motivo de alarma. Varias señales sostenidas en el tiempo sí ameritan una consulta.</p>
+      </div>
+
+      <div class="age-groups">
+        <details class="age" open>
+          <summary>De 0 a 2 años
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="age-body">
+            <ul>
+              <li>No responde a su nombre de forma constante hacia el año de edad.</li>
+              <li>Poco o nulo contacto visual sostenido, incluso con sus cuidadores principales.</li>
+              <li>No señala objetos para compartir interés ni sigue el señalamiento de un adulto.</li>
+              <li>No balbucea, no sonríe socialmente o pierde palabras o gestos que ya usaba.</li>
+              <li>Reacciones muy intensas o muy ausentes ante sonidos, luces o texturas.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age">
+          <summary>De 3 a 5 años
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="age-body">
+            <ul>
+              <li>Retraso marcado en el lenguaje, o un lenguaje muy repetitivo (ecolalia).</li>
+              <li>Prefiere jugar en soledad y le cuesta el juego simbólico o "de imaginación".</li>
+              <li>Rutinas muy rígidas y malestar intenso ante cualquier cambio inesperado.</li>
+              <li>Movimientos repetitivos como aletear las manos, balancearse o girar objetos.</li>
+              <li>Intereses muy intensos y focalizados en un tema o tipo de objeto puntual.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="age">
+          <summary>De 6 años en adelante
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <div class="age-body">
+            <ul>
+              <li>Dificultad para interpretar bromas, dobles sentidos o lenguaje no literal.</li>
+              <li>Le cuesta hacer y mantener amistades o entender las reglas sociales implícitas.</li>
+              <li>Necesita rutinas y anticipación clara para sentirse cómodo en el colegio.</li>
+              <li>Sensibilidad marcada a ruidos, luces, etiquetas de ropa u otros estímulos.</li>
+              <li>Puede pasar desapercibido si compensa mucho socialmente, con alto costo emocional.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="note-box">
+        <p>Si varias de estas señales te resultan familiares, el siguiente paso es pedir una evaluación con un pediatra, neurólogo infantil o psicólogo del desarrollo. Podés empezar por el centro de salud u hospital público más cercano, que deriva a especialistas cuando corresponde.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ORIENTADOR DE ESPECIALIDADES ================= -->
+  <section id="orientador">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>¿Qué especialista puede ayudar?</h2>
+        <p>Marcá las situaciones que más se parecen a lo que notás en tu hijo, hija o familiar (podés elegir varias) y vas a ver qué tipo de profesional suele trabajar cada una en Paraguay. Es un punto de partida para saber por dónde empezar a buscar, no un diagnóstico.</p>
+      </div>
+
+      <div class="orientador-box">
+        <p class="orientador-label">Marcá lo que se parezca a lo que ves:</p>
+        <div class="chip-group" id="chipGroup" role="group" aria-label="Situaciones observadas">
+          <button type="button" class="chip" data-cat="lenguaje">Le cuesta hablar, repite frases o casi no usa palabras</button>
+          <button type="button" class="chip" data-cat="sensorial">Le molestan ciertos sonidos, luces, texturas o etiquetas</button>
+          <button type="button" class="chip" data-cat="motor">Aletea las manos, se balancea, camina en puntitas o gira objetos</button>
+          <button type="button" class="chip" data-cat="social">Le cuesta jugar con otros chicos o hacer amigos</button>
+          <button type="button" class="chip" data-cat="rutinas">Necesita rutinas fijas y se angustia mucho con los cambios</button>
+          <button type="button" class="chip" data-cat="alimentacion_sueno">Come solo algunas texturas o le cuesta dormir</button>
+          <button type="button" class="chip" data-cat="escolar">Le va costando seguir el ritmo o las consignas en el colegio</button>
+          <button type="button" class="chip" data-cat="conducta">Tiene crisis de conducta intensas o se golpea cuando se frustra</button>
+        </div>
+
+        <div class="orientador-extra">
+          <label for="orientadorTexto">¿Querés contarlo con tus palabras? (opcional)</label>
+          <textarea id="orientadorTexto" rows="3" placeholder="Por ejemplo: se tapa los oídos con los ruidos fuertes, casi no habla y le cuesta dormir solo..."></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="orientadorBtn">Ver orientación</button>
+
+        <div class="orientador-result" id="orientadorResult" hidden aria-live="polite"></div>
+      </div>
+
+      <div class="note-box">
+        <p>Esta herramienta no diagnostica TEA ni ningún otro trastorno: solo orienta sobre qué profesional suele abordar cada tipo de situación. El diagnóstico lo da siempre un pediatra, neurólogo infantil, psiquiatra infantil o psicólogo del desarrollo, después de evaluar a la persona. Si varias de estas situaciones te resultan familiares, el siguiente paso es pedir esa evaluación — podés usar la sección de <a href="#recursos">Recursos en Paraguay</a> para encontrar dónde.</p>
+      </div>
+
+      <div class="verify-box">
+        <h3>Fuentes consultadas para armar esta guía</h3>
+        <p>La relación entre cada situación y el tipo de profesional se basa en materiales abiertos de organismos de salud reconocidos: <a href="https://www.cdc.gov/autism/signs-symptoms/index.html" target="_blank" rel="noopener">CDC — Signos y síntomas del TEA</a>, <a href="https://www.cdc.gov/autism/treatment/index.html" target="_blank" rel="noopener">CDC — Tratamiento e intervención para el TEA</a>, <a href="https://www.who.int/es/news-room/fact-sheets/detail/autism-spectrum-disorders" target="_blank" rel="noopener">OMS — Trastornos del espectro autista</a>, <a href="https://www.asha.org/public/speech/disorders/autism/" target="_blank" rel="noopener">ASHA — Autismo y el rol de la fonoaudiología</a>, <a href="https://www.aota.org/practice/clinical-topics/sensory-integration-and-processing" target="_blank" rel="noopener">AOTA — Integración sensorial y terapia ocupacional</a> y <a href="https://www.aacap.org/AACAP/Families_and_Youth/Facts_for_Families/Home.aspx" target="_blank" rel="noopener">AACAP — Guía de salud mental infantil para familias</a>. Para ver qué especialidades ofrece concretamente la red pública paraguaya: <a href="https://www.abc.com.py/nacionales/2026/04/02/tea-en-paraguay-donde-acudir-para-diagnostico-y-atencion-especializada-en-la-red-publica/" target="_blank" rel="noopener">ABC Color — TEA en Paraguay: dónde acudir en la red pública</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APOYO DESDE LA FAMILIA ================= -->
+  <section id="apoyo-familia">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cómo acompañar desde la familia</h2>
+        <p>La familia es el entorno donde un niño o niña con TEA pasa la mayor parte del tiempo, y eso la convierte en una pieza clave del proceso terapéutico, junto con los profesionales.</p>
+      </div>
+      <div class="support-grid">
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="4" x2="8" y2="10"/></svg>
+          <h3>Rutinas predecibles</h3>
+          <p>Horarios y secuencias claras para comer, bañarse o ir al colegio reducen la ansiedad. Anticipar los cambios con anterioridad, con palabras o pictogramas, ayuda mucho más que explicarlos sobre la marcha.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h3>Comunicación en su idioma</h3>
+          <p>No todos los niños con TEA se comunican con palabras. Pictogramas, señas, tableros de comunicación o apps pueden ser tan válidos como el habla: lo importante es que la persona pueda expresarse, no el canal que use.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <h3>Ambiente sensorial cuidado</h3>
+          <p>Bajar el volumen, la luz o el bullicio en casa en momentos de sobrecarga, y tener un rincón tranquilo al que la persona pueda retirarse, hace una diferencia real en su bienestar diario.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h3>Trabajo en equipo con los terapeutas</h3>
+          <p>Compartir con la familia lo que se trabaja en terapia, y sostenerlo en casa con las mismas estrategias, multiplica los avances. Preguntar y pedir ejemplos concretos a los profesionales es parte normal del proceso.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <h3>Cuidar a quien cuida</h3>
+          <p>Descansar, pedir ayuda y sostener espacios propios no es egoísmo: una familia agotada tiene menos recursos para acompañar. Buscar grupos de otros padres suele aliviar mucho la carga emocional.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5z"/></svg>
+          <h3>Sus intereses son una fortaleza</h3>
+          <p>Los intereses intensos de un niño con TEA son un punto de entrada para enseñar, motivar y conectar, no algo que haya que apagar. Usarlos a favor del aprendizaje suele funcionar mejor que ir en contra de ellos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECURSOS EN PARAGUAY ================= -->
+  <section class="alt" id="recursos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Dónde buscar terapia y apoyo en Paraguay</h2>
+        <p>Una selección de centros, hospitales y organizaciones que atienden TEA en Asunción y el Departamento Central, a partir de información pública. Te recomendamos llamar antes de asistir para confirmar horarios, costos y requisitos, porque estos datos cambian con el tiempo.</p>
+      </div>
+
+      <div class="locate-box">
+        <button type="button" class="btn btn-primary" id="locateBtn">📍 Ver centros más cercanos a mí</button>
+        <p class="locate-help">Esto le pide permiso a tu navegador para usar tu ubicación. No se guarda ni se envía a ningún lado: el cálculo se hace en tu propio dispositivo, solo para ordenar la lista.</p>
+        <p class="locate-status" id="locateStatus" role="status" aria-live="polite" hidden></p>
+      </div>
+
+      <div class="resource-list" id="resourceList">
+
+        <div class="resource" data-lat="-25.2550" data-lng="-57.6080">
+          <h3>Centro Municipal ASU TEA PY</h3>
+          <span class="tag">Público / gratuito</span>
+          <div class="meta">
+            <span>📍 Dispensario Municipal "3 de Mayo", Nivaclé e/ Dr. Luis de Gásperi, Barrio San Pablo, Asunción</span>
+            <span>🏥 Municipalidad de Asunción + Asociación TEA Paraguay</span>
+            <span class="dist-badge" hidden></span>
+          </div>
+          <p>Primer centro municipal de atención a personas con TEA del país, orientado a familias de escasos recursos. Equipo multidisciplinario: médicos especialistas en TEA, psiquiatría, psicología, terapia ocupacional, psicopedagogía y fonoaudiología.</p>
+          <a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=-25.2550,-57.6080" target="_blank" rel="noopener">🧭 Cómo llegar (Google Maps)</a>
+        </div>
+
+        <div class="resource" data-lat="-25.3400" data-lng="-57.5200">
+          <h3>Hospital General Pediátrico "Niños de Acosta Ñu"</h3>
+          <span class="tag">Público / referencia nacional</span>
+          <div class="meta">
+            <span>📍 San Lorenzo, Departamento Central</span>
+            <span>🏥 Ministerio de Salud Pública y Bienestar Social (MSPyBS)</span>
+            <span class="dist-badge" hidden></span>
+          </div>
+          <p>Designado como centro de referencia nacional para casos de mayor complejidad en niños y adolescentes con TEA, dentro de la red pública de salud. Se accede generalmente por derivación desde un centro de salud u hospital de tu zona.</p>
+          <a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=-25.3400,-57.5200" target="_blank" rel="noopener">🧭 Cómo llegar (Google Maps)</a>
+        </div>
+
+        <div class="resource" data-lat="-25.3958" data-lng="-57.3561">
+          <h3>Hospital Nacional de Itauguá</h3>
+          <span class="tag">Público / referencia departamental</span>
+          <div class="meta">
+            <span>📍 Itauguá, Departamento Central</span>
+            <span>🏥 MSPyBS</span>
+            <span class="dist-badge" hidden></span>
+          </div>
+          <p>Hospital de referencia del Departamento Central: un buen punto de partida si vivís en Itauguá o alrededores para consultar por pediatría y pedir una derivación hacia evaluación y servicios especializados en TEA.</p>
+          <a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=-25.3958,-57.3561" target="_blank" rel="noopener">🧭 Cómo llegar (Google Maps)</a>
+        </div>
+
+        <div class="resource" data-lat="-25.2975" data-lng="-57.5950">
+          <h3>CIRA Infantil</h3>
+          <span class="tag">Privado</span>
+          <div class="meta">
+            <span>📍 Tte. 1ro. Francisco Cowlan c/ Avda. Brasilia, Asunción</span>
+            <span>📞 021 288 7270</span>
+            <span>📷 Instagram / Facebook: @cirainfantil</span>
+            <span class="dist-badge" hidden></span>
+          </div>
+          <p>Centro integral para niños con trastornos del neurodesarrollo. Ofrece terapia ocupacional, fonoaudiología y estimulación temprana con un enfoque que integra a la familia y al colegio.</p>
+          <a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=-25.2975,-57.5950" target="_blank" rel="noopener">🧭 Cómo llegar (Google Maps)</a>
+        </div>
+
+        <div class="resource">
+          <h3>IPS — Instituto de Previsión Social</h3>
+          <span class="tag">Para asegurados/as</span>
+          <div class="meta">
+            <span>🏥 Red de servicios del IPS a nivel nacional</span>
+          </div>
+          <p>Brinda tratamiento multidisciplinario para pacientes con TEA a través de psicología, psicopedagogía y otras especialidades. Las terapias se agendan por derivación médica, por call center o en la secretaría del Servicio de Psicología de tu centro asistencial. No tiene una sola sede: acercate al que te corresponda según tu zona.</p>
+        </div>
+
+        <div class="resource">
+          <h3>Dr. Oscar Paats — Psiquiatría infantil</h3>
+          <span class="tag">Privado</span>
+          <div class="meta">
+            <span>📍 Asunción</span>
+          </div>
+          <p>Psiquiatra especializado en el tratamiento de TEA en niños, adolescentes y adultos, con enfoque en lenguaje y comportamiento junto a un equipo de psicología y pediatría.</p>
+        </div>
+
+        <div class="resource">
+          <h3>Asociación TEA Paraguay</h3>
+          <span class="tag">Organización de padres</span>
+          <div class="meta">
+            <span>🤝 Fundada en 2019 por padres y tutores</span>
+          </div>
+          <p>Organización sin fines de lucro formada por familias de personas con TEA en todo el país. Impulsa políticas públicas de salud y educación, y funciona además como red de contención y experiencia compartida entre padres. Podés buscarlos como "TEA Paraguay" en redes sociales para contactarlos y sumarte a la comunidad.</p>
+        </div>
+
+      </div>
+
+      <div class="verify-box">
+        <h3>¿Conocés un centro cerca tuyo que no está en esta lista?</h3>
+        <p>Esta guía se armó con información pública disponible en 2026 y está centrada en Asunción y el Departamento Central. Si en tu barrio o ciudad hay un centro, terapeuta o grupo de padres que ayuda a familias con TEA, podés compartirlo en la sección de <a href="#comunidad">Recomendaciones de otras familias</a>, un poco más abajo. Las distancias que calcula el botón de ubicación son aproximadas (en línea recta, no por calle), a partir de las direcciones públicas de cada centro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECOMENDACIONES DE LA COMUNIDAD ================= -->
+  <section id="comunidad">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Recomendaciones de otras familias</h2>
+        <p>Este espacio lo completan las propias familias: lugares, profesionales o grupos de apoyo a los que ya fueron y quieren recomendar. A diferencia de "Recursos en Paraguay", acá <strong>no verificamos</strong> lo que se comparte — es la experiencia de otras personas, así que conviene confirmar siempre antes de asistir.</p>
+      </div>
+
+      <div class="community-box">
+        <form id="communityForm" class="community-form">
+          <div class="form-row">
+            <label for="cNombre">Nombre del centro, profesional o grupo</label>
+            <input type="text" id="cNombre" maxlength="120" required>
+          </div>
+          <div class="form-row">
+            <label for="cTipo">¿Qué tipo de ayuda ofrece?</label>
+            <select id="cTipo">
+              <option value="Terapia ocupacional">Terapia ocupacional</option>
+              <option value="Fonoaudiología">Fonoaudiología</option>
+              <option value="Psicología">Psicología</option>
+              <option value="Psiquiatría infantil">Psiquiatría infantil</option>
+              <option value="Psicopedagogía">Psicopedagogía</option>
+              <option value="Pediatría">Pediatría</option>
+              <option value="Grupo de apoyo para padres">Grupo de apoyo para padres</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="cZona">Zona o dirección aproximada</label>
+            <input type="text" id="cZona" maxlength="160" placeholder="Ej: Asunción, Barrio Las Mercedes" required>
+          </div>
+          <div class="form-row">
+            <label for="cContacto">Teléfono o red social (opcional)</label>
+            <input type="text" id="cContacto" maxlength="120">
+          </div>
+          <div class="form-row">
+            <label for="cComentario">Contanos tu experiencia</label>
+            <textarea id="cComentario" rows="3" maxlength="400" required placeholder="Qué te pareció, para quién lo recomendás, cómo fue la atención..."></textarea>
+          </div>
+          <div class="form-row">
+            <label for="cAutor">Tu nombre o apodo (opcional)</label>
+            <input type="text" id="cAutor" maxlength="60" placeholder="Ej: Mamá de Luque">
+          </div>
+          <button type="submit" class="btn btn-primary" id="communitySubmitBtn">Compartir recomendación</button>
+          <p class="community-status" id="communityStatus" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <div class="community-list" id="communityList">
+          <p class="community-empty">Cargando recomendaciones de la comunidad…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LÍNEAS DE AYUDA ================= -->
+  <section id="ayuda">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Líneas de ayuda en Paraguay</h2>
+        <p>Números gratuitos, disponibles las 24 horas, para orientación o momentos de crisis. No reemplazan la atención terapéutica continua, pero están para cuando se necesita hablar con alguien ya.</p>
+      </div>
+      <div class="help-grid">
+        <div class="help-card crisis">
+          <span class="num">155</span>
+          <h3>Línea de crisis en salud mental</h3>
+          <p>Del Ministerio de Salud Pública y Bienestar Social. Atendida por psicólogos y psiquiatras, las 24 horas, los 7 días de la semana, en todo el país. No requiere saldo ni datos móviles.</p>
+        </div>
+        <div class="help-card">
+          <span class="num">147</span>
+          <h3>Línea de la Niñez y la Adolescencia</h3>
+          <p>Orientación y contención para situaciones que involucran a niños, niñas y adolescentes, articulada con la red de salud mental y protección infantil.</p>
+        </div>
+        <div class="help-card">
+          <span class="num">911</span>
+          <h3>Emergencias generales</h3>
+          <p>Para cualquier situación de emergencia médica o de seguridad que requiera asistencia inmediata.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-col" style="max-width:420px;">
+      <h4>Backing Blue</h4>
+      <p>Un punto de partida para familias de Paraguay que acompañan a un hijo o familiar con Trastorno del Espectro Autista. Esta guía es informativa y no reemplaza una evaluación ni un tratamiento profesional.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Contenido</h4>
+      <ul>
+        <li><a href="#que-es">Qué es el TEA</a></li>
+        <li><a href="#senales">Señales</a></li>
+        <li><a href="#orientador">Qué especialista me puede ayudar</a></li>
+        <li><a href="#apoyo-familia">Apoyo desde la familia</a></li>
+        <li><a href="#recursos">Recursos en Paraguay</a></li>
+        <li><a href="#comunidad">Recomendaciones</a></li>
+        <li><a href="#ayuda">Líneas de ayuda</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Diccionario: categoría -> ficha de orientación + palabras clave para detectarla en el texto libre
+  var CATS = {
+    lenguaje: {
+      titulo: 'Fonoaudiología / terapia del lenguaje',
+      texto: 'Trabaja el desarrollo del habla, la comprensión del lenguaje y, cuando hace falta, formas alternativas de comunicación (pictogramas, señas, tableros).',
+      palabras: ['no habla','le cuesta hablar','repite','ecolalia','lenguaje','no responde a su nombre','pocas palabras','balbuce'],
+      fuenteNombre: 'ASHA — El rol de la fonoaudiología en el autismo',
+      fuenteUrl: 'https://www.asha.org/public/speech/disorders/autism/'
+    },
+    sensorial: {
+      titulo: 'Terapia ocupacional (integración sensorial)',
+      texto: 'Ayuda a regular las reacciones a sonidos, luces, texturas o movimiento, y a tolerar mejor los estímulos del día a día.',
+      palabras: ['ruido','sonido','luz','textura','etiqueta','se tapa los oídos','sensorial','molesta'],
+      fuenteNombre: 'AOTA — Integración y procesamiento sensorial',
+      fuenteUrl: 'https://www.aota.org/practice/clinical-topics/sensory-integration-and-processing'
+    },
+    motor: {
+      titulo: 'Terapia ocupacional + evaluación con neurología o psiquiatría infantil',
+      texto: 'Los movimientos repetitivos (aletear, balancearse, girar objetos, caminar en puntitas) suelen abordarse desde terapia ocupacional, dentro de una evaluación más general del desarrollo.',
+      palabras: ['aletea','balancea','gira objetos','puntitas','movimiento repetitivo','mano'],
+      fuenteNombre: 'CDC — Señales y síntomas del TEA',
+      fuenteUrl: 'https://www.cdc.gov/autism/signs-symptoms/index.html'
+    },
+    social: {
+      titulo: 'Psicología del desarrollo / habilidades sociales',
+      texto: 'Trabaja el juego compartido, la interpretación de señales sociales y la construcción de vínculos con otros chicos.',
+      palabras: ['amigos','jugar con otros','social','solo','aislad','no comparte'],
+      fuenteNombre: 'CDC — Tratamiento e intervención para el TEA',
+      fuenteUrl: 'https://www.cdc.gov/autism/treatment/index.html'
+    },
+    rutinas: {
+      titulo: 'Psicología conductual',
+      texto: 'Da estrategias para anticipar cambios, bajar la angustia ante lo inesperado y sostener rutinas de forma más flexible.',
+      palabras: ['rutina','cambio','rígid','angustia','le cuesta cambiar'],
+      fuenteNombre: 'CDC — Señales y síntomas del TEA',
+      fuenteUrl: 'https://www.cdc.gov/autism/signs-symptoms/index.html'
+    },
+    alimentacion_sueno: {
+      titulo: 'Pediatría + terapia ocupacional',
+      texto: 'El pediatra evalúa primero la alimentación y el sueño; terapia ocupacional ayuda con la selectividad sensorial de texturas y con hábitos de descanso.',
+      palabras: ['come solo','selectivo con la comida','no duerme','dormir','sueño','textura de la comida'],
+      fuenteNombre: 'CDC — Tratamiento e intervención para el TEA',
+      fuenteUrl: 'https://www.cdc.gov/autism/treatment/index.html'
+    },
+    escolar: {
+      titulo: 'Psicopedagogía',
+      texto: 'Acompaña el aprendizaje y las consignas escolares, y ayuda a armar adaptaciones junto con el colegio.',
+      palabras: ['colegio','escuela','consigna','aprender','tarea','maestra'],
+      fuenteNombre: 'CDC — Tratamiento e intervención para el TEA',
+      fuenteUrl: 'https://www.cdc.gov/autism/treatment/index.html'
+    },
+    conducta: {
+      titulo: 'Psiquiatría infantil',
+      texto: 'Cuando hay crisis de conducta frecuentes o intensas, conviene una evaluación psiquiátrica infantil para entender qué las dispara y encontrar un abordaje adecuado.',
+      palabras: ['crisis','se golpea','se lastima','agrede','grita mucho','frustra'],
+      fuenteNombre: 'AACAP — Guía de salud mental infantil para familias',
+      fuenteUrl: 'https://www.aacap.org/AACAP/Families_and_Youth/Facts_for_Families/Home.aspx'
+    }
+  };
+
+  var chipGroup = document.getElementById('chipGroup');
+  var textoEl = document.getElementById('orientadorTexto');
+  var btn = document.getElementById('orientadorBtn');
+  var resultEl = document.getElementById('orientadorResult');
+
+  if (chipGroup){
+    chipGroup.addEventListener('click', function(e){
+      var chip = e.target.closest('.chip');
+      if (!chip) return;
+      chip.classList.toggle('active');
+      chip.setAttribute('aria-pressed', chip.classList.contains('active') ? 'true' : 'false');
+    });
+  }
+
+  function detectarPorTexto(texto){
+    var encontrados = [];
+    var t = (texto || '').toLowerCase();
+    if (!t.trim()) return encontrados;
+    Object.keys(CATS).forEach(function(key){
+      var match = CATS[key].palabras.some(function(p){ return t.indexOf(p) !== -1; });
+      if (match) encontrados.push(key);
+    });
+    return encontrados;
+  }
+
+  if (btn){
+    btn.addEventListener('click', function(){
+      var seleccionadas = Array.prototype.slice.call(chipGroup.querySelectorAll('.chip.active'))
+        .map(function(c){ return c.getAttribute('data-cat'); });
+      var porTexto = detectarPorTexto(textoEl ? textoEl.value : '');
+      var todas = seleccionadas.concat(porTexto.filter(function(c){ return seleccionadas.indexOf(c) === -1; }));
+
+      resultEl.innerHTML = '';
+      resultEl.hidden = false;
+
+      if (todas.length === 0){
+        resultEl.innerHTML = '<p class="orientador-empty">Elegí al menos una situación de la lista, o contanos algo en el cuadro de texto, para ver una orientación.</p>';
+        resultEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+        return;
+      }
+
+      var intro = document.createElement('p');
+      intro.className = 'orientador-intro';
+      intro.textContent = 'Según lo que marcaste, estos son los profesionales que suelen trabajar esas situaciones:';
+      resultEl.appendChild(intro);
+
+      var grid = document.createElement('div');
+      grid.className = 'orientador-cards';
+      todas.forEach(function(key){
+        var cat = CATS[key];
+        if (!cat) return;
+        var card = document.createElement('div');
+        card.className = 'orientador-card';
+        card.innerHTML = '<h3>' + cat.titulo + '</h3><p>' + cat.texto + '</p>' +
+          '<p class="orientador-fuente">Fuente: <a href="' + cat.fuenteUrl + '" target="_blank" rel="noopener">' + cat.fuenteNombre + '</a></p>';
+        grid.appendChild(card);
+      });
+      resultEl.appendChild(grid);
+
+      var cierre = document.createElement('p');
+      cierre.className = 'orientador-cierre';
+      cierre.innerHTML = 'Recordá que esto no reemplaza una evaluación profesional. Para dar el siguiente paso, mirá la sección de <a href="#recursos">Recursos en Paraguay</a>, donde varios centros cubren varias de estas especialidades en un mismo lugar.';
+      resultEl.appendChild(cierre);
+
+      resultEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  }
+})();
+</script>
+
+<script>
+(function(){
+  // Ordena los centros con dirección conocida por cercanía a la ubicación de la persona.
+  // Todo el cálculo pasa en el navegador: la ubicación no se guarda ni se envía a ningún servidor.
+  var btn = document.getElementById('locateBtn');
+  var statusEl = document.getElementById('locateStatus');
+  var list = document.getElementById('resourceList');
+  if (!btn || !list) return;
+
+  function haversineKm(lat1, lon1, lat2, lon2){
+    var R = 6371;
+    var dLat = (lat2 - lat1) * Math.PI / 180;
+    var dLon = (lon2 - lon1) * Math.PI / 180;
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+      Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) *
+      Math.sin(dLon/2) * Math.sin(dLon/2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  function mostrarEstado(msg){
+    statusEl.textContent = msg;
+    statusEl.hidden = false;
+  }
+
+  btn.addEventListener('click', function(){
+    if (!('geolocation' in navigator)){
+      mostrarEstado('Tu navegador no admite ubicación. Podés igual revisar las direcciones de cada centro más abajo.');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Buscando tu ubicación…';
+    mostrarEstado('');
+    statusEl.hidden = true;
+
+    navigator.geolocation.getCurrentPosition(function(pos){
+      btn.disabled = false;
+      btn.textContent = '📍 Ver centros más cercanos a mí';
+
+      var miLat = pos.coords.latitude;
+      var miLon = pos.coords.longitude;
+
+      var items = Array.prototype.slice.call(list.querySelectorAll('.resource'));
+      var conUbicacion = [];
+      var sinUbicacion = [];
+
+      items.forEach(function(item){
+        var lat = parseFloat(item.getAttribute('data-lat'));
+        var lng = parseFloat(item.getAttribute('data-lng'));
+        if (!isNaN(lat) && !isNaN(lng)){
+          var dist = haversineKm(miLat, miLon, lat, lng);
+          item._dist = dist;
+          var badge = item.querySelector('.dist-badge');
+          if (badge){
+            badge.hidden = false;
+            badge.textContent = '📏 a unos ' + (dist < 1 ? Math.round(dist*1000) + ' m' : dist.toFixed(1) + ' km') + ' en línea recta';
+          }
+          var mapsLink = item.querySelector('.maps-link');
+          if (mapsLink){
+            mapsLink.href = 'https://www.google.com/maps/dir/?api=1&origin=' + miLat + ',' + miLon + '&destination=' + lat + ',' + lng + '&travelmode=driving';
+            mapsLink.textContent = '🧭 Cómo llegar desde tu ubicación';
+          }
+          conUbicacion.push(item);
+        } else {
+          sinUbicacion.push(item);
+        }
+      });
+
+      conUbicacion.sort(function(a, b){ return a._dist - b._dist; });
+      conUbicacion.concat(sinUbicacion).forEach(function(item){ list.appendChild(item); });
+
+      mostrarEstado('Ordenamos los centros con dirección conocida de más cerca a más lejos de tu ubicación actual (distancia aproximada, en línea recta).');
+      list.scrollIntoView({behavior:'smooth', block:'start'});
+    }, function(err){
+      btn.disabled = false;
+      btn.textContent = '📍 Ver centros más cercanos a mí';
+      if (err.code === err.PERMISSION_DENIED){
+        mostrarEstado('No pudimos acceder a tu ubicación porque no diste el permiso. Podés activarlo en la configuración de tu navegador e intentar de nuevo, o revisar las direcciones de cada centro más abajo.');
+      } else if (err.code === err.TIMEOUT){
+        mostrarEstado('Tardó demasiado en encontrar tu ubicación. Probá de nuevo o revisá las direcciones más abajo.');
+      } else {
+        mostrarEstado('No pudimos obtener tu ubicación en este momento. Podés revisar las direcciones de cada centro más abajo.');
+      }
+    }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  // Recomendaciones de la comunidad: se guardan y se leen con la base de datos
+  // compartida del artifact, para que cualquiera que abra el sitio vea los mismos aportes.
+  var form = document.getElementById('communityForm');
+  var listEl = document.getElementById('communityList');
+  var statusEl = document.getElementById('communityStatus');
+  var submitBtn = document.getElementById('communitySubmitBtn');
+  if (!form || !listEl) return;
+
+  function escapeHtml(str){
+    return (str || '').replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function mostrarEstado(msg, esError){
+    if (!statusEl) return;
+    statusEl.textContent = msg || '';
+    statusEl.hidden = !msg;
+    statusEl.classList.toggle('is-error', !!esError);
+  }
+
+  function renderList(docs){
+    if (!docs.length){
+      listEl.innerHTML = '<p class="community-empty">Todavía no hay recomendaciones de la comunidad. ¡Sé la primera persona en compartir una!</p>';
+      return;
+    }
+    listEl.innerHTML = docs.map(function(d){
+      var data = d.data() || {};
+      var nombre = escapeHtml(data.nombre || 'Sin nombre');
+      var tipo = escapeHtml(data.tipo || 'Otro');
+      var zona = escapeHtml(data.zona || '');
+      var contacto = data.contacto ? escapeHtml(data.contacto) : '';
+      var comentario = escapeHtml(data.comentario || '');
+      var autor = escapeHtml(data.autor || '') || 'Alguien de la comunidad';
+      var mapsQuery = encodeURIComponent((data.nombre || '') + ' ' + (data.zona || '') + ' Paraguay');
+      return (
+        '<div class="community-card">' +
+          '<div class="community-card-head"><h3>' + nombre + '</h3><span class="tag">' + tipo + '</span></div>' +
+          '<p class="community-meta">📍 ' + zona + (contacto ? ' · 📞 ' + contacto : '') + '</p>' +
+          '<p>' + comentario + '</p>' +
+          '<p class="community-foot">Compartido por ' + autor + ' · <a href="https://www.google.com/maps/search/?api=1&query=' + mapsQuery + '" target="_blank" rel="noopener">🧭 Buscar en Google Maps</a></p>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
+  if (typeof window.claude === 'undefined' || typeof window.claude.use !== 'function'){
+    mostrarEstado('Esta función de la comunidad solo funciona dentro de la versión publicada del sitio (no en el archivo HTML suelto).', true);
+    listEl.innerHTML = '';
+    form.hidden = true;
+    return;
+  }
+
+  window.claude.use('db').then(function(db){
+    if (!db){
+      mostrarEstado('No pudimos activar las recomendaciones en esta vista. Puede que necesites abrir el enlace que te compartieron e iniciar sesión.', true);
+      listEl.innerHTML = '';
+      form.hidden = true;
+      return;
+    }
+
+    var col = db.collection('recomendaciones');
+    col.orderBy('ts', 'desc').limit(50).onSnapshot(function(snap){
+      renderList(snap.docs);
+    }, function(err){
+      mostrarEstado('No pudimos cargar las recomendaciones en este momento (' + err.code + ').', true);
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nombre = document.getElementById('cNombre').value.trim();
+      var zona = document.getElementById('cZona').value.trim();
+      var comentario = document.getElementById('cComentario').value.trim();
+      if (!nombre || !zona || !comentario){
+        mostrarEstado('Completá al menos el nombre, la zona y tu experiencia.', true);
+        return;
+      }
+      var data = {
+        nombre: nombre,
+        tipo: document.getElementById('cTipo').value,
+        zona: zona,
+        contacto: document.getElementById('cContacto').value.trim(),
+        comentario: comentario,
+        autor: document.getElementById('cAutor').value.trim(),
+        ts: Date.now()
+      };
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando…';
+      col.add(data).then(function(){
+        form.reset();
+        mostrarEstado('¡Gracias! Tu recomendación ya es visible para todos.', false);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Compartir recomendación';
+      }).catch(function(err){
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Compartir recomendación';
+        if (err && err.code === 'invalid_argument'){
+          mostrarEstado('No pudimos guardar tu recomendación: parece que no tenés permiso para escribir en esta vista del sitio.', true);
+        } else {
+          mostrarEstado('No pudimos guardar tu recomendación en este momento. Probá de nuevo en un rato.', true);
+        }
+      });
+    });
+  }).catch(function(){
+    mostrarEstado('Esta función no está disponible en esta vista del sitio.', true);
+    form.hidden = true;
+  });
+})();
+</script>
+
+</body>
+</html>
